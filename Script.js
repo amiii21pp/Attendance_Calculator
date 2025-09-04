@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("attendance-form");
+  const resetBtn = document.querySelector(".reset-btn");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    calculate();
+  });
+
+  resetBtn.addEventListener("click", function () {
+    resetForm();
+  });
+});
+
 function calculate() {
   let total = parseInt(document.getElementById("total").value);
   let attended = parseInt(document.getElementById("attended").value);
